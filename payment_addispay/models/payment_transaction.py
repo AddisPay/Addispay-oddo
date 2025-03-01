@@ -28,7 +28,7 @@ class PaymentTransaction(models.Model):
     def execute_payment(self):
         api_url = self.provider_id.addispay_checkout_api_url
         AddisPay_values = {
-            "public_key": self.provider_id.addispay_public_api_key,
+            "public_key": self.provider_id.addispay_merchant_id,
             "amount": self.amount,
             "email": self.partner_email,
             "ref":   self.reference,

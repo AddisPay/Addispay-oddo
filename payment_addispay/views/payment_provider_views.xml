@@ -8,11 +8,8 @@
         <field name="arch" type="xml">
             <group name = "provider_credentials" position='inside'>
                 <group invisible="code !='addispay'">
-                    <field name="addispay_public_api_key" required="code == 'addispay' and state != 'disabled'"/>
-                    <field name="addispay_private_key" required="code == 'addispay' and state != 'disabled'"/>
                     <field name="addispay_checkout_api_url" required="code == 'addispay' and state != 'disabled'"/>
-                    <field name="addispay_return_api_url" required="code == 'addispay' and state != 'disabled'"/>
-                    <field name="addispay_callback_api_url" required="code == 'addispay' and state != 'disabled'"/>
+                    <field name="addispay_merchant_id" required="code == 'addispay' and state != 'disabled'"/>
                 </group>
             </group>
         </field>
